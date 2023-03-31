@@ -38,6 +38,10 @@ ${COLOR_DEF}> '
 # Add date and time to the beginning of the prompt
 PROMPT='${COLOR_YEL}[%D{%Y-%m-%f} %D{%L:%M:%S}] '$PROMPT
 
+# Call compinit so 1password completion will run
+autoload -Uz compinit
+compinit
+
 # Add zsh autocomplete for 1password items
 eval "$(op completion zsh)"; compdef _op op
 
