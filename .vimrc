@@ -75,17 +75,29 @@ set wildmode=list:longest
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
+" Update time to 100ms (default value is 4000) Note updatetime also controls the delay before vim writes its swap file (see :help updatetime).
+set updatetime=100
+
 " PLUGINS ---------------------------------------------------------------- {{{
 
 " Plugin code goes here.
 
 call plug#begin('~/.vim/plugged')
 
+
 " Unmanaged plugin (manually installed and updated)
 " Plug 'https://github.com/dracula/vim.git'
   Plug 'dense-analysis/ale'
 
   Plug 'preservim/nerdtree'
+
+  Plug 'tpope/vim-commentary'
+
+  Plug 'tpope/vim-fugitive'
+
+  Plug 'junegunn/gv.vim'
+
+  Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -202,7 +214,7 @@ if has('gui_running')
     set background=dark
 
     " Set the color scheme.
-    colorscheme molokai
+    colorscheme dracula_pro_van_helsing
 
     " Set a custom font you have installed on your computer.
     " Syntax: <font_name>\ <weight>\ <size>
