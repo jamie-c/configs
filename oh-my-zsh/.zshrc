@@ -1,3 +1,7 @@
+CONFIGS=$HOME/configs
+source $CONFIGS/zshrc/linux.sh
+source $CONFIGS/zshrc/universal.sh
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -100,62 +104,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-# Virtualenvwrapper settings:
-# eval "$(pyenv init -)"
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=~/.virtualenvs
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
-source /home/jamie/.local/bin/virtualenvwrapper.sh
-
-# Uncomment the following line to make emacs run in the shell window.
-# alias emacs='emacs -nw'
-
-# Directory to keep journals in
-export logdir="$HOME/.journal"
-# Auto-generate journal entry filename
-function journal(){
-    vim $logdir/$(date +%Y-%m-%d -d "$*").md
-}
-
-export PATH="$PATH:/usr/sbin"
-
-# Add pip /home/jamie/.local/bin to PATH
-export PATH="$PATH:$HOME/.local/bin"
-
-# Add flatpak directory to path
-export PATH="$PATH:/var/lib/flatpak/exports/share:/home/jamie/.local/share/flatpak/exports/share"
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
- 
-# Add zsh autocomplete for 1password items
-eval "$(op completion zsh)"; compdef _op op
- 
-# Uss ssh keys stored in 1password vault
-export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
- 
-### ALIASES ###
-alias l='command ls -Av1hl --color=always --time-style=long-iso --group-directories-first'
- 
-# -A: show all, including dotfiles, except . and ..
-# -v: natural sort of number
-# -1 (one): list (use -l for long version)
-# -h: human-readable sizes
- 
-alias rm='command rm -Iv'
- 
-# -I: prompt once before removing more than three files or recursively
-# -v: verbose
- 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
- 
-# Export nvm completion settings for zsh-nvm plugin
-export NVM_COMPLETION=true
- 
-# Export ollama path to store models
-export OLLAMA_MODELS=/home/jamie/.local/opt/models
- 
-source ~/.zsh-nvm/zsh-nvm.plugin.zsh
