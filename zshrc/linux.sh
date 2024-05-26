@@ -17,3 +17,13 @@ export PATH="$PATH:/var/lib/flatpak/exports/share:/home/jamie/.local/share/flatp
 
 # Export ollama path to store models
 export OLLAMA_MODELS=/home/jamie/.local/opt/models
+
+source ~/.zsh-nvm/zsh-nvm.plugin.zsh
+
+### ALIASES ###
+alias l='command ls -Av1hl --color=always --time-style=long-iso --group-directories-first'
+ 
+# -A: show all, including dotfiles, except . and ..
+# -v: natural sort of number
+# -1 (one): list (use -l for long version)
+# -h: human-readable sizes
