@@ -14,14 +14,6 @@ eval "$(op completion zsh)"; compdef _op op
 # Uss ssh keys stored in 1password vault
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
  
-### ALIASES ###
-alias l='command ls -Av1hl --color=always --time-style=long-iso --group-directories-first'
- 
-# -A: show all, including dotfiles, except . and ..
-# -v: natural sort of number
-# -1 (one): list (use -l for long version)
-# -h: human-readable sizes
- 
 alias rm='command rm -Iv'
  
 # -I: prompt once before removing more than three files or recursively
@@ -34,4 +26,3 @@ export NVM_DIR="$HOME/.nvm"
 # Export nvm completion settings for zsh-nvm plugin
 export NVM_COMPLETION=true
  
-source ~/.zsh-nvm/zsh-nvm.plugin.zsh
