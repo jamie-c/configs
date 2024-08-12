@@ -27,3 +27,5 @@ alias l='command ls -Av1hl --color=always --time-style=long-iso --group-director
 # -v: natural sort of number
 # -1 (one): list (use -l for long version)
 # -h: human-readable sizes
+
+alias kepubebooks='kepubify --no-preserve-dirs -u -o "/home/jamie/Dropbox/Apps/Rakuten Kobo" /home/jamie/Dropbox/Jamie/Calibre\ Library/'
